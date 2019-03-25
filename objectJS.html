@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object-Oriented JavaScript</title>
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="http://www.teaching-materials.org/common/css/bootstrap.min.css">
+    <style>
+    html,
+    body {
+        background-color: powderblue;
+        height: 100%;
+        }
+    .center-block {
+        width:200px;
+        padding:10px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color:#eceadc;
+        color:#ec8007
+        }
+     h4 {
+       text-align: center;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+    <div class="center-block">
+      <h4>Object-Oriented JavaScript</h4>
+      <form name="ooJS">
+        Enter the Name: <input type="text" class="textbox" id="name"><br>
+        Enter the Age: <input type="text" class="textbox" id="age"><br>
+      </form><br>
+      <form name="results">
+      <input type="button" class="button" value="Result:"
+       onClick="getElementById('output').innerHTML = Person(document.getElementById('name').value, document.getElementById('age').value)"><br>
+      </form><br>
+      <p id="output"></p>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        Person = function (name, age) {
+        var Person = {
+        name : name,
+        age : age,
+        describe : function(){
+            return this.name + ", " + this.age + " years old"; } };
+        return Person.describe() }
+    </script>
+  </body>
+</html>
